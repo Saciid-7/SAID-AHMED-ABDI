@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace SCORE
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double test1;
+            double test2;
+            double test3;
+            double total;
+            double average;
+            test1 = double.Parse(Test1textBox.Text);
+            test2 = double.Parse(Test2textBox.Text);
+            test3 = double.Parse(Test3textBox.Text);
+            total = test1 + test2 + test3;
+            average = total / 3;
+            Averagelabel1.Text = average.ToString();
+            Averagelabel1.BackColor = Color.WhiteSmoke;
+            
+            
+            
+        }
+
+        private void Averagelabel1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}
